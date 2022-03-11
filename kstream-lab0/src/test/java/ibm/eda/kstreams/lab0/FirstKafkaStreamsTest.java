@@ -1,4 +1,4 @@
-package ibm.gse.kstreams.lab0;
+package ibm.eda.kstreams.lab0;
 
 import java.util.Properties;
 
