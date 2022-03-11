@@ -92,9 +92,6 @@ public class TestFinancialMessage {
         testDriver = new TopologyTestDriver(builder.build(), getStreamsConfig());
         inTopic = testDriver.createInputTopic(inTopicName, new StringSerializer(),
                 new JSONSerde<FinancialMessage>());
-        // outTopic =
-        // testDriver.createOutputTopic(outTopicName,windowedSerde.deserializer(), new
-        // LongDeserializer());
         outTopic = testDriver.createOutputTopic(outTopicName, new StringDeserializer(), new LongDeserializer());
         errorTopic = testDriver.createOutputTopic(errorTopicName, new StringDeserializer(), new StringDeserializer());
     }
